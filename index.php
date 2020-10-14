@@ -9,15 +9,19 @@
                     $byThree = $i % 3;
                     $byFive = $i % 5;
                 ?>
-                <?php if(!$byThree  && !$byFive ): ?>
-                    <li>FizzBuzz</li>
-                <?php elseif (!$byFive): ?>
-                    <li>Buzz</li>
-                <?php elseif (!$byThree): ?>
-                    <li>Fizz</li>
-                <?php else : ?>
-                    <li><?php echo $i; ?></li>
-                <?php endif; ?>
+                <li>
+                    <?php 
+                        if(!$byThree  && !$byFive ) {
+                            echo 'FizzBuzz';
+                        } elseif (!$byFive) {
+                            echo 'Buzz';
+                        } elseif (!$byThree) {
+                            echo 'Fizz';
+                        } else {
+                            echo $i;
+                        }
+                    ?>
+                </li>
             <?php endfor; ?>
         </ul>
     </body>
