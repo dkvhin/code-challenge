@@ -9,12 +9,10 @@
         -->
         <ul style="list-style:none;">
             <?php for($i = 1; $i <= 100; $i++): ?>
-                <?php
-                    $byThree = $i % 3;
-                    $byFive = $i % 5;
-                ?>
                 <li>
                     <?php 
+                        $byThree = $i % 3;
+                        $byFive = $i % 5;
                         if(!$byThree  && !$byFive ) {
                             echo 'FizzBuzz';
                         } elseif (!$byFive) {
